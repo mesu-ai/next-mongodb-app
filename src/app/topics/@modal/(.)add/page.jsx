@@ -11,11 +11,18 @@ const TopicAddModal = () => {
     setTopic({ ...topic, [name]: value });
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
 
     try {
 
+      const res= fetch('http://localhost:3000/api/topics', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(topic)
+      })
+
+      console.log({res})
       console.log({topic})
       
     } catch (error) {
