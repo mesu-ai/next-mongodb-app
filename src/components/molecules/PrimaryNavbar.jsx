@@ -16,7 +16,7 @@ const headerRoutes = [
 const PrimaryNavbar = () => {
   return (
     <nav className="bg-blue-100 py-5">
-      <ul className="flex justify-center gap-10">
+      <ul className="flex justify-center gap-5 md:gap-10">
         <Navigation navLinks={headerRoutes} />
       </ul>
     </nav>
