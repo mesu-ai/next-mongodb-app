@@ -14,15 +14,15 @@ const TopicPage = async () => {
         </Link>
       </div>
 
-      <ul>
+      <ul className='flex'>
         {topics.map(topic =>
 
-          <li key={topic?._id}>{topic.title}</li>
+          <div className='py-2 px-3 rounded-lg bg-green-200' key={topic?._id}>
+            {topic.title}
+          </div>
         )}
 
       </ul>
-
-
     </div>
   );
 };
